@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style-minify.css" />
+    <title>Daniel Chua</title>
+  </head>
+  <body>
+    <head>
+      <nav class="navWrapper">
+        <a href="#" class="logo"><span class="logoFirstName">Daniel</span>Chua</a>
+        <ul class="navLink">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="project.html"> Project </a>
+          </li>
+          <li>
+            <a href="#skills"> Skills </a>
+          </li>
+          <button class="contactButton"><a href="#footer"> Contact Me </a></button>
+        </ul>
+        <img src="../assets/hamburger.png" alt="hamburgerButton" class="hamburgerButton" />
+      </nav>
+    </head>
+
+    <main>
+      <section>
+        <div class="mainWrapper">
+          <div class="textWrapperParent">
+            <div class="textWrapper">
+              <h2>Hello Buds</h2>
+              <h1>I am <span class="text-primaryLavender"> Daniel Chua </span></h1>
+
+              <p>Front End Enthusiast</p>
+            </div>
+            <div class="singleLine"></div>
+
+            <p class="about">
+              Hello, my name is Daniel Chua I am a second-year student at STMIK Widya Cipta Dharma studying computer science with interest in
+              Front-end web development. I have spent the last two years studying the foundations of web development, becoming proficient in HTML,
+              CSS, and JavaScript. More recently, I have begun investigate frameworks, like Tailwind CSS.
+            </p>
+
+            <div class="buttonWrapper">
+              <div class="cvButtonParent">
+                <img src="../assets/Subtract.png" alt="" class="cvLogo" />
+                <button class="cvButton" id="downloadButton">Download CV</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="imgWrapper">
+            <img src="../assets/Untitled-1-Recovered 1.png" alt="danielChua" />
+            <div class="socialLinksParent">
+              <p>Find Me On</p>
+              <ul class="socialLinks">
+                <li class="animateImg hiddenImg">
+                  <a href="https://www.instagram.com/danieelc28._/?hl=id"><img src="../assets/instagram.png" alt="instagram" class="socialIcon" /></a>
+                </li>
+                <li class="animateImg hiddenImg">
+                  <a href="https://www.linkedin.com/in/daniel-chua-a743a51bb/"
+                    ><img src="../assets/linkedin.png" alt="linkedin" class="socialIcon"
+                  /></a>
+                </li>
+                <li class="animateImg hiddenImg">
+                  <a href="https://github.com/DanielChuaaa"><img src="../assets/github.png" alt="github" class="socialIcon" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="whatWrapper">
+          <p>What Do I Offer</p>
+          <h2>Creates Professional Design That’s Oriented Towards Client Needs</h2>
+          <div class="carouselParent">
+            <div class="caruoselChild">
+              <div>
+                <div class="carouselImgGuide"></div>
+                <div class="carouselImg hiddenImg animateImg">
+                  <img src="../assets/component.png" alt="component" />
+                  <h3 class="text-primaryLavender text-center text-20 min-w-fit">CrossBrowser</h3>
+                </div>
+              </div>
+
+              <div>
+                <div class="carouselImgGuide"></div>
+                <div class="carouselImg hiddenImg animateImg">
+                  <img src="../assets/responsive.png" alt="responsive" />
+                  <h3 class="text-primaryLavender text-center text-20 min-w-fit">Responsive Web</h3>
+                </div>
+              </div>
+
+              <div>
+                <div class="carouselImgGuide"></div>
+                <div class="carouselImg hiddenImg animateImg">
+                  <img src="../assets/perfomance.png" alt="perfomance" />
+                  <h3 class="text-primaryLavender text-center text-20 min-w-fit">Performance</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carouselNav hiddenImg">
+          <a class="prevButton hiddenImg animateImg" onclick="plusSlides(-1)">❮</a>
+          <span class="dot hiddenImg animateImg" onclick="currentSlide(1)"></span>
+          <span class="dot hiddenImg animateImg" onclick="currentSlide(2)"></span>
+          <span class="dot hiddenImg animateImg" onclick="currentSlide(3)"></span>
+          <a class="nextButton hiddenImg animateImg" onclick="plusSlides(1)">❯</a>
+        </div>
+      </section>
+    </main>
+
+    <section>
+      <marquee class="scrollRightText" direction="right" scrollamount="16">MY PROJECT</marquee>
+      <div class="hiddenText">
+        <h2 class="latest">Latest Project</h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="myProjectParent">
+        <div class="myProjectChild">
+          <div class="projectCard hiddenText">
+            <img src="../assets/sunnyside.jpg" alt="sunnyside" class="imgProject" />
+            <p>Sunnyside Landing Page</p>
+            <a href="https://danielchuaaa.github.io/sunnyside-agency-landing-page-main/src/">View Details</a>
+          </div>
+
+          <div class="projectCard hiddenText">
+            <img src="../assets/advice.jpg" alt="advice" class="imgProject" />
+            <p>Advice Generator App Main</p>
+            <a href="https://danielchuaaa.github.io/advice-generator-app-main/src/">View Details</a>
+          </div>
+
+          <div class="projectCard hiddenText">
+            <img src="../assets/crowdfunding (1).jpg" alt="crowdfunding" class="imgProject" />
+            <p>Crowd Funding Product Page</p>
+            <a href="https://danielchuaaa.github.io/Frontendmentor-crowdfunding-product-page-main/src/">View Details</a>
+          </div>
+
+          <div class="moreProject hiddenText">
+            <h2>Have any project in mind?</h2>
+            <div class="moreProjectButton">
+              <a href="project.html" class="moreProjectButtonA">More Projects</a>
+              <div class="emailButton">
+                <img src="../assets/mail.png" alt="mail" class="emailImg" />
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">Email Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <marquee class="scrollRightText" direction="right" scrollamount="16" id="skills">TOOLS AND SKILLS</marquee>
+      <div class="hiddenImg">
+        <h2 class="latest">Tools and Skills</h2>
+      </div>
+    </section>
+
+    <section>
+      <div class="toolsAndSkills">
+        <div class="toolSkillsCard hiddenImg animateImg">
+          <img src="../assets/html.png" alt="HTML" />
+        </div>
+        <div class="toolSkillsCard hiddenImg animateImg">
+          <img src="../assets/css.png" alt="CSS" />
+        </div>
+        <div class="toolSkillsCard hiddenImg animateImg">
+          <img src="../assets/tailwind.png" alt="tailwind" />
+        </div>
+        <div class="toolSkillsCard hiddenImg animateImg">
+          <img src="../assets/js.png" alt="JavaScript" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerWrapper">
+        <div class="footerLeftSide" id="footer">
+          <h3>Get In Touch</h3>
+          <p class="footerWrapperP">For business and partnership inquiry please contact me below!</p>
+          <div class="contactWrapperParent">
+            <div class="contactWrapperChild">
+              <img src="../assets/phone.png" alt="phone" />
+              <div class="contactTextWrapper">
+                <p class="contactTextGrey">Phone</p>
+                <p>0895704152191</p>
+              </div>
+            </div>
+
+            <div class="contactWrapperChild">
+              <img src="../assets/mailfooter.png" alt="mailfooter" />
+              <div class="contactTextWrapper">
+                <p class="contactTextGrey">Email</p>
+                <p>chuar9175@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contactWrapperChild">
+              <img src="../assets/address.png" alt="address" />
+              <div class="contactTextWrapper">
+                <p class="contactTextGrey">Adress</p>
+                <p>Kalimantan Timur, Samarinda</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="imgFooter">
+          <img src="../assets/footerimg.png" alt="footerimg" />
+        </div>
+      </div>
+    </footer>
+
+    <div class="overlay hidden"></div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,397 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply font-fp bg-primaryBlack;
+}
+
+.navWrapper {
+  @apply flex justify-between items-center 925:px-24 md:px-8 px-12 py-10 bg-secondaryBlack w-full;
+}
+
+.logo {
+  @apply font-semibold text-2xl text-white hover:text-primaryLavender hover:scale-105 transition duration-300 ease-in-out;
+}
+
+.logoFirstName {
+  @apply text-primaryLavender hover:text-white hover:scale-105 transition duration-300 ease-in-out;
+}
+
+.navLink {
+  @apply md:flex hidden items-center gap-8  md:opacity-100 opacity-0 md:translate-x-0 translate-x-full;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navLink-active {
+  @apply flex flex-col gap-6 fixed top-0 right-0 320:p-12 p-8 320:pt-24 pt-20 bg-secondaryBlack 425:w-3/5 h-full z-20 translate-x-0 opacity-100;
+  animation: slideIn 0.3s forwards;
+}
+
+.navLink a {
+  @apply font-semibold text-white hover:text-secondaryLavender text-20;
+  transition: color 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contactButton {
+  @apply font-semibold text-primaryLavender text-20 p-4 outline outline-primaryLavender hover:outline-white rounded-rounded5;
+}
+
+.hamburgerButton {
+  @apply md:hidden block z-20;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburgerButton-active {
+  @apply fixed right-0 pr-12;
+  transform: rotate(360deg);
+}
+
+main {
+  @apply 925:px-24 px-8;
+}
+
+.mainWrapper {
+  @apply grid 925:grid-cols-2 grid-cols-1 grid-rows-1 925:justify-items-stretch justify-items-center pt-16;
+}
+
+.textWrapperParent {
+  @apply flex flex-col 925:items-start items-center 925:text-start text-center;
+  grid-area: 2 / 1;
+}
+
+@media (min-width: 925px) {
+  .textWrapperParent {
+    grid-area: 1 / 1;
+  }
+}
+
+.textWrapper h2 {
+  @apply font-fp font-semibold text-white text-4xl;
+}
+
+.textWrapper h1 {
+  @apply font-fp font-semibold text-white 1099:text-52 text-42 mt-4 leading-tight;
+}
+
+.textWrapper p {
+  @apply font-fp text-secondaryGrey pt-4;
+}
+
+.singleLine {
+  @apply border-t-2 border-secondaryGrey 925:w-14 w-full mt-6;
+}
+
+.about {
+  @apply font-fp text-secondaryGrey pt-4 max-w-mw55;
+}
+
+.buttonWrapper {
+  @apply flex md:gap-8 gap-6 text-white mt-8;
+}
+
+.cvButtonParent {
+  @apply relative flex items-center;
+}
+
+.cvLogo {
+  @apply absolute  left-4;
+}
+
+.cvButton {
+  @apply font-semibold 479:text-20 text-base bg-primaryLavender hover:bg-indigo-600 transition-all ease-in-out rounded-rounded5 py-4 pr-4 pl-10;
+}
+
+.imgWrapper {
+  @apply flex flex-col 925:items-end items-center;
+  grid-area: 1 / 1;
+}
+
+@media (min-width: 925px) {
+  .imgWrapper {
+    grid-area: 1 / 2;
+  }
+}
+
+.socialLinksParent {
+  @apply flex 925:justify-end justify-center items-center gap-4 925:pt-20 925:py-0 py-8 md:mx-0 mx-auto;
+}
+
+.socialLinksParent p {
+  @apply text-white text-20;
+}
+
+.socialLinks {
+  @apply flex items-center gap-4;
+}
+
+.socialIcon {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.socialIcon:hover {
+  @apply transform scale-110;
+}
+
+.whatWrapper {
+  @apply flex flex-col items-center font-semibold text-white md:pt-20 pt-12;
+}
+
+.whatWrapper p {
+  @apply text-primaryGrey text-20;
+}
+
+.whatWrapper h2 {
+  @apply text-4xl text-center md:mt-8 mt-4 max-w-mw29 text-pretty;
+}
+
+.carouselParent {
+  @apply flex justify-center items-center 925:px-16 px-8 925:py-12 py-8 md:mt-20 mt-12 bg-secondaryBlack rounded-rounded10 925:w-full;
+}
+
+.caruoselChild {
+  @apply flex md:flex-row flex-col items-center 925:gap-12 gap-8;
+}
+
+.carouselImgGuide-active {
+  @apply 925:w-full w-0 border-t-8 border-primaryLavender 925:-translate-y-3.3 -translate-y-9 rounded-3xl;
+  transition: background-color 0.6s ease;
+}
+
+.carouselImg {
+  @apply fade flex flex-col items-center bg-carou p-8 rounded-rounded10;
+}
+
+.carouselImg-active {
+  @apply 925:border border-0 border-primaryLavender;
+  transition: background-color 0.6s ease;
+}
+
+.blur-active {
+  @apply blur-2;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carouselNav {
+  @apply flex justify-center items-center gap-2 pt-2;
+}
+
+.prevButton,
+.nextButton {
+  @apply md:block hidden cursor-pointer font-bold text-white text-2xl p-4 transition duration-75 ease-in-out;
+  user-select: none;
+}
+
+.dot {
+  @apply md:block hidden cursor-pointer bg-secondaryGrey;
+  padding: 0.1rem;
+  height: 9px;
+  width: 44px;
+  border-radius: 25px;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  @apply bg-primaryLavender;
+}
+
+.scrollRightText {
+  @apply text-200 text-primaryBlack font-fp opacity-20;
+  -webkit-text-stroke: 1.5px #999999;
+}
+
+.latest {
+  @apply font-fp font-bold text-white text-4xl text-center -translate-y-44;
+}
+
+.myProjectParent {
+  @apply 925:px-24 px-8 -mt-24;
+}
+
+.myProjectChild {
+  @apply flex flex-col md:gap-10 gap-8;
+}
+
+.projectCard {
+  @apply flex 925:flex-row flex-col justify-between 925:items-center 925:gap-4 gap-5 bg-secondaryBlack 925:p-12 p-8 rounded-rounded10;
+}
+
+.projectCard p {
+  @apply font-fp font-bold text-white text-3xl text-center text-pretty;
+}
+
+.projectCard a {
+  @apply font-fp font-bold text-white text-center text-20 px-6 py-4 bg-primaryLavender hover:bg-indigo-600 transition-all ease-in-out  rounded-rounded5;
+}
+
+.imgProject {
+  @apply 925:w-60 w-full rounded-rounded10 transform 925:hover:scale-125 hover:scale-110 cursor-pointer;
+  transition: 0.5s all cubic-bezier(0, 0.39, 0.58, 1);
+}
+
+.moreProject {
+  @apply flex 925:flex-row flex-col 925:gap-0 gap-5 justify-between items-center bg-secondaryBlack p-8 mt-4 rounded-xl;
+}
+
+.moreProject h2 {
+  @apply font-semibold text-white 925:text-left text-center text-balance text-3xl;
+}
+
+.moreProjectButton {
+  @apply flex 925:flex-row flex-col items-center md:gap-8 gap-6 text-center max-[925px]:w-full;
+}
+
+.moreProjectButtonA {
+  @apply font-semibold text-white hover:text-primaryLavender transition-all ease-in-out text-20 px-6 py-4 border border-white max-[925px]:w-full rounded-rounded5;
+}
+
+.emailButton {
+  @apply flex justify-center items-center gap-4 bg-primaryLavender hover:bg-indigo-600 transition-all ease-in-out  font-semibold text-white   text-20 px-6 py-4 max-[925px]:w-full rounded-rounded5;
+}
+
+.toolsAndSkills {
+  @apply flex 479:flex-row flex-col 677:flex-nowrap flex-wrap justify-center items-center px-8 925:gap-4.5 gap-4 -mt-5.5;
+}
+
+.toolSkillsCard {
+  @apply bg-thidrBlack p-8 rounded-30;
+}
+
+.footerWrapper {
+  @apply grid 925:grid-cols-2 925:justify-start justify-center bg-secondaryBlack 925:px-24 px-8 md:py-20 py-8 md:mt-36 mt-12;
+}
+
+.footerLeftSide {
+  grid-area: 2 / 1;
+}
+
+@media (min-width: 925px) {
+  .footerLeftSide {
+    grid-area: 1 / 1;
+  }
+}
+
+.footerWrapper h3 {
+  @apply font-semibold text-white text-4xl 925:text-left text-center;
+}
+
+.footerWrapperP {
+  @apply text-secondaryGrey 925:mt-10 mt-2 925:text-left text-center text-balance 925:max-w-mw55 max-w-40;
+}
+
+.contactWrapperParent {
+  @apply flex flex-col gap-4 925:mt-8 mt-6;
+}
+
+.contactWrapperChild {
+  @apply flex 925:flex-row flex-col items-center 925:gap-4 gap-3;
+}
+
+.contactTextWrapper {
+  @apply text-white 925:text-left text-center items-center;
+}
+
+.contactTextGrey {
+  @apply text-secondaryGrey;
+}
+
+.imgFooter {
+  @apply grid justify-end;
+  grid-area: 1 / 1;
+}
+
+@media (min-width: 925px) {
+  .imgFooter {
+    grid-area: 1 / 2;
+  }
+}
+
+/*  */
+
+.hiddenText {
+  @apply opacity-0 transition-all;
+  transition: all 1s;
+}
+
+.showText {
+  @apply opacity-100;
+}
+
+.hiddenImg {
+  @apply opacity-0 blur-5 -translate-x-full transition-all;
+  transition: all 1s;
+}
+
+.showImg {
+  @apply opacity-100 blur-0 translate-x-0;
+}
+
+@media (prefers-reduced-motion) {
+  .hiddenImg {
+    transition: none;
+  }
+}
+
+.animateImg:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.animateImg:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.animateImg:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+.animateImg:nth-child(5) {
+  transition-delay: 400ms;
+}
+
+.animateImg:nth-child(6) {
+  transition-delay: 500ms;
+}
+
+.overlay {
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10 transition-all;
+}
+
+.overlay.hidden {
+  @apply opacity-0 pointer-events-none;
+}
+
+.overlay.visible {
+  @apply opacity-100 pointer-events-auto;
+}
+
+.bgBlurEffect {
+  @apply blur-2;
+  transition: filter 0.3s ease;
+}
